@@ -20,9 +20,9 @@ public class CommunityGroupPage {
 
     // Create Community Group page
 
-    private SelenideElement title = $("input[id=\"community_group_title\"]");
-    private SelenideElement description = $("input[id=\"community_group_description\"]");
-    private SelenideElement sortOrder = $("input[id=\"community_group_sortOrder\"]");
+    private SelenideElement title = $("#community_group_title");
+    private SelenideElement description = $("#community_group_description");
+    private SelenideElement sortOrder = $("#community_group_sortOrder");
     private SelenideElement saveButton = $(".btn-primary");
 
     public void fillTitle(String text) {

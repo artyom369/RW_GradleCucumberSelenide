@@ -1,4 +1,4 @@
-Feature: Create Community Group
+Feature: My Setup
 
   Scenario: Create Community Group
     Then Input email
@@ -11,5 +11,9 @@ Feature: Create Community Group
     Then Fill Description field
     Then Fill Sort Order field
     Then Click "Save"
+
+  Scenario: Create Community
+    Then Open Communities page
+    Then Click Create Community button
 
 

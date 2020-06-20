@@ -5,14 +5,13 @@ Feature: Expand Main Menu
     Then Input password
     Then Click "Sign in" button
 
-    Then Open Community groups page
-    Then Title "Manage community groups" visible
-    Then Click Create Community Group button
 
     Then Open Communities page
     Then Title "Manage communities" visible
     Then Click Create Community button
-    Then Open Tasks page
+    Then Fill Community title "TEST Community ARTEM"
+    Then Choose Community group "Global Group"
+    Then Click "Save"
 
 
 

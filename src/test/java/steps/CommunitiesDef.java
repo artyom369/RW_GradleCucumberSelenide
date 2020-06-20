@@ -14,4 +14,16 @@ public class CommunitiesDef {
 
         mainMenu.openManagementCommunities();
     }
+
+    @Then("Choose Community group {string}")
+    public void chooseCommunityGroup(String text) {
+
+        communitiesPage.selectCommunityGroup(text);
+    }
+
+    @Then("Fill Community title {string}")
+    public void fillCommunityTitle(String text) {
+
+        communitiesPage.fillCommunityTitle(text);
+    }
 }
