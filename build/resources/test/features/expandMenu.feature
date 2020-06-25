@@ -6,11 +6,9 @@ Feature: Expand Main Menu
     Then Click "Sign in" button
 
 
-    Then Open Communities page
-    Then Title "Manage communities" visible
-    Then Click Create Community button
-    Then Fill Community title "TEST Community ARTEM"
-    Then Choose Community group "Global Group"
+    Then Open Mobile page
+    Then Title "Mobile" visible
+    Then Enter Android version "3.4.9.002.000"
     Then Click "Save"
 
 
