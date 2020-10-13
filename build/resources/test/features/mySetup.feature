@@ -15,5 +15,6 @@ Feature: My Setup
   Scenario: Create Community
     Then Open Communities page
     Then Click Create Community button
+    //Then test test
 
 

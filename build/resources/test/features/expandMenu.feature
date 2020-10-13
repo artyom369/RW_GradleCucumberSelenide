@@ -7,9 +7,9 @@ Feature: Expand Main Menu
 
 
     Then Open Mobile page
-    Then Title "Mobile" visible
-    Then Enter Android version "3.4.9.002.000"
-    Then Click "Save"
+
+    Then Setup Android version "3.4.9.002.000"
+
 
 
 

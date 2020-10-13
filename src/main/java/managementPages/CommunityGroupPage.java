@@ -10,7 +10,7 @@ public class CommunityGroupPage {
     public void titleIsVisible(String text) {
 
        // $(".management__title").shouldBe(Condition.visible);
-        $(By.xpath("//div[contains(text(),'" + text + "')]")).shouldBe(Condition.visible);
+        $(By.xpath(".management__title[contains(text(),'" + text + "')]")).shouldBe(Condition.visible);
     }
 
     public void clickCreateCommGroupButton() {

@@ -2,27 +2,37 @@ package pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-
 import static com.codeborne.selenide.Selenide.$;
 
 public class MainMenu {
 
-    private static final SelenideElement MainConfiguration = $(".mdc-list-item[data-id=\"menu.management.main_configuration\"]");
-    private static final SelenideElement Management = $(".mdc-list-item--with-icon[data-id=\"menu.management\"]");
-    private static final SelenideElement Mobile = $("a[href=\"/management/parameters/mobile\"]");
+    //User pages
+    private static final SelenideElement Home = $(".mdc-list-item[data-id=\"menu.home\"]");
+    private static final SelenideElement TasksUser = $(".mdc-list-item[data-id=\"menu.tasks\"]");
     /*private static final SelenideElement Mobile = $("");
     private static final SelenideElement Mobile = $("");
     private static final SelenideElement Mobile = $("");
     private static final SelenideElement Mobile = $("");
     private static final SelenideElement Mobile = $("");
-    private static final SelenideElement Mobile = $("");
-    private static final SelenideElement Mobile = $("");
-    private static final SelenideElement Mobile = $("");
-    private static final SelenideElement Mobile = $("");
-    private static final SelenideElement Mobile = $("");
-    private static final SelenideElement Mobile = $("");
-    private static final SelenideElement Mobile = $("");
-    private static final SelenideElement Mobile = $("");
+    private static final SelenideElement Mobile = $("");*/
+
+    //Management pages
+    private static final SelenideElement MainConfiguration = $(".mdc-list-item[data-id=\"menu.management.main_configuration\"]");
+    private static final SelenideElement Management = $(".mdc-list-item--with-icon[data-id=\"menu.management\"]");
+    private static final SelenideElement Mobile = $("a[href=\"/management/parameters/mobile\"]");
+    private static final SelenideElement ActivityDashboard = $("a[href=\"/management/activity_dashboard\"]");
+    private static final SelenideElement Badges = $("a[href=\"/management/badge\"]");
+    private static final SelenideElement CommunityGroup = $("a[href=\"/management/community_group\"]");
+    private static final SelenideElement Communities = $("a[href=\"/management/communities\"]");
+    private static final SelenideElement Tasks = $("a[href=\"/management/tasks\"]");
+    private static final SelenideElement Users = $("a[href=\"/management/users\"]");
+    private static final SelenideElement Roles = $("a[href=\"/management/role\"]");
+    private static final SelenideElement Levels = $("a[href=\"/management/levels\"]");
+    /*private static final SelenideElement Mobile = $("");
+    /*private static final SelenideElement Mobile = $("");
+    /*private static final SelenideElement Mobile = $("");
+    /*private static final SelenideElement Mobile = $("");
+    /*private static final SelenideElement Mobile = $("");
     private static final SelenideElement Mobile = $("");
     private static final SelenideElement Mobile = $("");
     private static final SelenideElement Mobile = $("");
@@ -46,56 +56,66 @@ public class MainMenu {
 
     public void openManagementCommunityGroup() {
 
-        //$(".mdc-list-item--with-icon[data-id=\"menu.management\"]").click();
+        if (CommunityGroup.isDisplayed()) {
 
-        if ($(".mdc-list-item[data-id=\"label.community_groups\"]").isDisplayed()) {
-        } else {
+        }
+        else {
             Management.click();
         }
-        $(".mdc-list-item[data-id=\"label.community_groups\"]").click();
+        CommunityGroup.click();
 
     }
 
     public void openManagementCommunities() {
 
-        if ($(".mdc-list-item[data-id=\"label.communities\"]").isDisplayed()) {
-        } else {
+        if (Communities.isDisplayed()) {
+
+        }
+        else {
             Management.click();
         }
-        $(".mdc-list-item[data-id=\"label.communities\"]").click();
+        Communities.click();
 
     }
 
     public void openManagementTasks() {
 
-        if ($(".mdc-list-item[data-id=\"management_menu.tasks\"]").isDisplayed()) {
-        } else {
+        if (Tasks.isDisplayed()) {
+
+        }
+        else {
             Management.click();
         }
-        $(".mdc-list-item[data-id=\"management_menu.tasks\"]").click();
-
+        Tasks.click();
 
     }
-
 
     public void openMainConfigurationMobile() {
 
         if (Mobile.isDisplayed()) {
 
-            Mobile.click();
         }
-        else if (Mobile.is(Condition.hidden) && MainConfiguration.is(Condition.hidden)) {
+        else if (Mobile.is(Condition.hidden) && MainConfiguration.isDisplayed()) {
+
+            MainConfiguration.click();
+        }
+        else if (Mobile.is(Condition.hidden)) {
 
             Management.click();
             MainConfiguration.click();
-            Mobile.click();
+        }
+        Mobile.click();
+
+    }
+
+    public void openManagementBadges() {
+
+        if (Badges.isDisplayed()) {
 
         }
-        else if(Mobile.is(Condition.hidden) && MainConfiguration.isDisplayed()) {
-
-            MainConfiguration.click();
-            Mobile.click();
+        else {
+            Management.click();
         }
-
+        Badges.click();
     }
 }

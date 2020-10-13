@@ -1,7 +1,7 @@
 package steps;
 
 import io.cucumber.java.en.Then;
-import managementPages.MobilePage;
+import managementPages.mainConfiguration.MobilePage;
 import pages.MainMenu;
 
 public class MobileDef {
@@ -15,9 +15,11 @@ public class MobileDef {
         mainMenu.openMainConfigurationMobile();
     }
 
-    @Then("Enter Android version {string}")
+    @Then("Setup Android version {string}")
     public void enterAndroidVersion(String arg0) {
 
         mobilePage.enterAndroidVersion(arg0);
     }
+
+
 }
